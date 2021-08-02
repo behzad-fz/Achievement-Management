@@ -31,6 +31,7 @@ NOTICE : if you get following error, Your database docker container may have sto
  SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known (SQL: select * from information_schema.tables where table_schema = AchievementManagement and table_name = migrations and table_type = 'BASE TABLE')
 ```
 Just run "docker-compose up -d" again to start the containers, then run "make setup" command to resume setup process.
+
 NOTICE: At the end it will require you to enter root password to set permission:
 
 ## Makefile
