@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'badge',
     ];
 
     /**
@@ -63,5 +64,20 @@ class User extends Authenticatable
     public function watched()
     {
         return $this->belongsToMany(Lesson::class)->wherePivot('watched', true);
+    }
+
+    public function achievements()
+    {
+        return $this->hasMany(UserAchievement::class);
+    }
+
+    public function commentWrittenAchievements()
+    {
+        return $this->hasMany(UserAchievement::class)->where('achievable_type', Comment::class);
+    }
+
+    public function lessonWatchedAchievements()
+    {
+        return $this->hasMany(UserAchievement::class)->where('achievable_type', Lesson::class);
     }
 }
