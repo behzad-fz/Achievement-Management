@@ -1,5 +1,4 @@
-# iPHONE PHOTOGRAPHY SCHOOL
-Achievement Management<br>
+# Achievement Management
 
 ## Requirements:
 - Docker
